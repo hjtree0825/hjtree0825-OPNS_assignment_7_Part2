@@ -1,8 +1,5 @@
 library(tidyverse)
 
-set.seed(1234)
-num_rep <- 10
-
 sim_data <- function(num_rep){
 	data.frame(prob_ind= 1:num_rep) %>% 
 		mutate(x= 1+ rpois(n(), lambda=3) ) %>% 
